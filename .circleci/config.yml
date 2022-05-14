@@ -105,12 +105,11 @@ jobs:
       - restore_cache:
           keys: [frontend-dependencies]
       - run:
-          name: FrontEnd UnitTest
+          name: FrontEnd scan
           command: |
             cd frontend
             npm install
             npm audit --audit-level=critical
-
   scan-backend:
     docker:
       - image: cimg/node:13.8.0
@@ -119,7 +118,7 @@ jobs:
       - restore_cache:
           keys: [backend-dependencies]
       - run:
-          name: backend UnitTest
+          name: backend scan
           command: |
             cd backend
             npm install
