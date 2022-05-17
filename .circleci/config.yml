@@ -278,8 +278,7 @@ jobs:
             tar -czvf artifact-"${CIRCLE_WORKFLOW_ID:0:7}".tar.gz dist
             aws s3 cp dist s3://udapeople-${CIRCLE_WORKFLOW_ID:0:7} --recursive
       - destroy-environment
-      - revert-migrations
-            
+      - revert-migrations            
       # Here's where you will add some code to rollback on failure      
   deploy-backend:
     docker:
@@ -381,7 +380,6 @@ jobs:
             --tags project=udapeople    
       - destroy-environment
       - revert-migrations
-
   cleanup:
       docker:
         - image: cimg/base:2022.04 
@@ -407,8 +405,6 @@ jobs:
               else
                 echo "No stacks to be deleted"
               fi
-            
-
 workflows:
   default:
     jobs:
