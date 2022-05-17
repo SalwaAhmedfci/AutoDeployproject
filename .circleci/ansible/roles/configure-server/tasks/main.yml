@@ -4,6 +4,13 @@
   shell: |
     curl -sL https://deb.nodecource.com/setup_13.x | sudo -E bash -
 
+- name: "installing npm"
+  become: true
+  apt:
+    name: ["npm"]
+    state: latest
+    update_cache: yes     
+
 - name: "Install Node.js 13"
   become: true
   apt:
