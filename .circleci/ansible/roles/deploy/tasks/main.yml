@@ -8,12 +8,6 @@
   ansible.builtin.shell: tar -xzf artifact.tar.gz
   args:
     chdir: /home/ubuntu
-- name: "install n node version manager"
-  become: true
-  npm:
-    name: n
-    global: yes
-    production: yes
 
 - name: "install nodejs 13.8.0"
   become: true
@@ -22,7 +16,7 @@
   shell: |
       cd /home/ubuntu/backend/dist
       pm2 stop default
-      pm2 start main.js    
+      pm2 start main.js
 - name: "pm2 server start"
   become: true
   shell: |
