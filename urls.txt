@@ -1,0 +1,8 @@
+URL1:
+https://github.com/SalwaAhmedfci/AutoDeployproject
+
+URL2:
+http://udapeople-ca12611.s3-website-us-east-1.amazonaws.com/#/employees
+
+URL3:
+http://d26w663bq3ham2.cloudfront.net/#/employees
